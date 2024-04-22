@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gulp-scss-starter</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <a href="/" class="header__logo">
+                    <img src="./img/content/logo.png" alt="" loading="lazy" width="300" height="98">
+                </a>
+
+                <button class="header__burger js-header-burger">
+                    <svg width="34" height="34">
+                        <use xlink:href="./img/sprites/sprite.svg#burger"></use>
+                    </svg>
+                </button>
+
+                <div class="header__right js-header-menu">
+                    <div class="header__right-menu">
+                        <div class="header__right-top">
+                            <nav class="header__nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">О сервисе</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Вопрос-Ответ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Блог</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Отзывы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <a class="btn header__auth">
+                                Войти в ЛК
+                            </a>
+
+                            <!-- <div class="header__profile">
+                            <a href="#" class="header__user">Андрей Разумовский</a>
+                            <a href="#" class="header__logout">Выйти</a>
+                        </div> -->
+                        </div>
+
+                        <ul class="header__menu">
+                            <li class="header__menu-item js-header-menu-link">
+                                <a href="#" class="header__menu-link">
+                                    платные прогнозы
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                    </svg>
+                                </a>
+                                <ul class="header__menu-sub js-header-menu-sub">
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на футбол
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на баскетбол
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на хоккей
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на гандбол
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на бейсбол
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на теннис
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на киберспорт
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на регби
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="header__menu-item js-header-menu-link">
+                                <a href="#" class="header__menu-link">
+                                    бесплатные прогнозы
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                    </svg>
+                                </a>
+                                <ul class="header__menu-sub js-header-menu-sub">
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на футбол
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на баскетбол
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на хоккей
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на гандбол
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на бейсбол
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на теннис
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на киберспорт
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Прогнозы на регби
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="header__menu-item js-header-menu-link">
+                                <a href="#" class="header__menu-link">
+                                    результаты
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                    </svg>
+                                </a>
+                                <ul class="header__menu-sub js-header-menu-sub">
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Бесплатных прогнозов
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <svg>
+                                                <use xlink:href="./img/sprites/sprite.svg#arrow-dwn"></use>
+                                            </svg>
+                                            Платных прогнозов
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="header__menu-item js-header-menu-link">
+                                <a href="#" class="header__menu-link">статистика</a>
+                            </li>
+
+
+                            <li class="header__menu-item js-header-menu-link">
+                                <a href="#" class="header__menu-link">тарифы</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="intro">
+            <div class="intro__bg">
+                <picture>
+                    <img src="./img/content/into-bg.jpg" alt="" width="1920" height="920">
+                </picture>
+            </div>
+            <div class="container">
+                <div class="intro__top">
+                    <div class="intro__content">
+                        <h1 class="intro__title">
+                            Зарабатывай БОЛЬШЕ <br> с <span>алгоритмом ASB</span>
+                        </h1>
+
+                        <p class="intro__text">
+                            При помощи машинного алгоритма ASB <br>
+                            ВЫ МОГЛИ БЫ ЗАРАБОТАТЬ за последние <span>28 дней</span>
+                        </p>
+
+                        <div class="intro__slider">
+                            <input type="text" class="js-range-slider" name="my_range" value="" />
+                            <div class="intro__slider-wrap">
+                                <span>0 ₽</span>
+                                <span>5000 ₽</span>
+                                <span>10000 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__content-right">
+                        <div class="intro__phone">
+                            <picture>
+                                <img src="./img/content/phone.png" alt="" width="744" height="744" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="intro__order">
+                            <div class="intro__order-title">10 прогнозов бесплатно!</div>
+                            <div class="intro__order-text">
+                                Разместите отзыв о нас в соцсетях или на любом сайте – после проверки мы подарим вам 10 пронозов из платного раздела. <br><br>
+
+                                Воспользовться можно в течении года. Подарки могут суммироаться, например: 3 отзыва – 30 прогнозов. <br><br>
+
+                                Разместите отзыв о нас в соцсетях или на любом сайте – после проверки мы подарим вам 10 пронозов из платного раздела. Воспользовться можно в течении года.
+                            </div>
+                            <div class="intro__order-link">
+                                <svg>
+                                    <use xlink:href="./img/sprites/sprite.svg#arrow-link"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro__bottom">
+                    <div class="intro__prices">
+                        <div class="intro__prices-title">Расчитайте свой заработок! Cумма одной ставки = </div>
+                        <div class="intro__prices-list js-button-prices">
+                            <button data-price="500">500 ₽</button>
+                            <button data-price="1000">1000 ₽</button>
+                            <button data-price="3000">3000 ₽</button>
+                            <button data-price="5000" class="is-active">5000 ₽</button>
+                        </div>
+                        <p class="intro__prices-text">
+                            Этот блок ежедневно рассчитывается автоматически на основе всех выданных платных прогнозов.
+                            Расчет составлен при использовании финансовой стратегии Флет.
+                            Расчет основан на данных реальных <a href="#">результатов и статистики.</a>
+                        </p>
+                    </div>
+
+                    <div class="intro__swiper">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="advantages__head">
+                <div class="advantages__head-img">
+                    <picture>
+                        <source media="(min-width: 541px)" srcset="./img/content/advantages/advantages_img.png">
+                        <img src="./img/content/advantages/advantages_img_mob.png" alt="" loading="lazy" width="1920" height="676">
+                    </picture>
+                </div>
+                <div class="container">
+                    <div class="advantages__content">
+                        <div class="advantages__content-title">
+                            <span>Как заработать с помощью алгоритма ASB?</span>
+                            <svg width="39" height="39">
+                                <use xlink:href="./img/sprites/sprite.svg#arrow_white"></use>
+                            </svg>
+                        </div>
+                        <div class="advantages__content-subtitle">10 прогнозов <br> <span>бесплатно!</span></div>
+                        <p class="advantages__content-text">
+                            Разместите отзыв о нас в соцсетях или на любом сайте — после <br>проверки мы подарим вам 10 пронозов из платного раздела.
+                        </p>
+                        <p class="advantages__content-text">
+                            Воспользовться можно в течении года. Подарки могут суммироваться, <br> например: 3 отзыва — 30 прогнозов.
+                        </p>
+                        <button class="btn btn_green advantages__btn">подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="advantages__inner">
+                <div class="advantages__img">
+                    <picture>
+                        <source media="(min-width: 541px)" srcset="./img/content/advantages/advantages_bg.png">
+                        <img src="./img/content/advantages/advantages_bg_mob.png" alt="" loading="lazy" width="1920" height="1060">
+                    </picture>
+                </div>
+                <div class="container">
+                    <div class="advantages__wrap">
+                        <div class="advantages__suptitle">АЛГОРИТМ СПОРТИВНЫХ ПРОГНОЗОВ ASB ( ANALYTICS SMART BETS )</div>
+                        <div class="advantages__top">
+                            <div class="advantages__top-title">ASB — это название алгоритма, выдающего прогнозы на спортивные события.</div>
+                            <div class="advantages__top-text">
+                                <p>
+                                    Все прогнозы ASB — результат работы компьютера, а не человека. Что позволяет полностью исключить очень вредный человеческий фактор!
+                                    На этом сайте вы можете получать данные прогнозы бесплатно или оформить платную подписку.
+                                </p>
+                                <p>
+                                    Результаты всех выданных прогнозов ASB выкладываются в общий доступ: результаты бесплатных и результаты платных.
+                                    Мы придерживаемся принципа полной прозрачности. Убедитесь в этом сами: проследите за публикуемыми бесплатными прогнозами или станьте нашим клиентом на 1-2 дня.
+                                    Специально для этого мы создали варианты краткосрочных подписок.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="advantages__title">Чем мы лучше других сервисов прогнозов?</h2>
+                        <div class="advantages__row swiper js-advantages-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="advantages__item swiper-slide advantages__item_first">
+                                    <span class="advantages__item-numb">01</span>
+                                    <span class="advantages__item-title">Стабильность выдачи</span>
+                                    <p class="advantages__text">
+                                        Все прогнозы ASB — результат работы компьютера, а не человека. Что позволяет полностью исключить очень вредный человеческий фактор!
+                                    </p>
+                                </div>
+                                <div class="advantages__item swiper-slide ">
+                                    <span class="advantages__item-numb">02</span>
+                                    <span class="advantages__item-title">Выгодные <br> тарифы</span>
+                                    <p class="advantages__text">
+                                        Мы составили такую ценовую политику, которая позволят зарабатывать, а не делать ставки только для того, чтобы окупить стоимость подпики.
+                                    </p>
+                                </div>
+                                <div class="advantages__item swiper-slide ">
+                                    <span class="advantages__item-numb">03</span>
+                                    <span class="advantages__item-title">Открытая статистика</span>
+                                    <p class="advantages__text">
+                                        Алгоритм работает сам, статистика собирается в автоматическом режиме и даже администраторы сайе не могут ее поменять.
+                                    </p>
+                                </div>
+                                <div class="advantages__item swiper-slide ">
+                                    <span class="advantages__item-numb">04</span>
+                                    <span class="advantages__item-title">Мы не удаляем отзывы</span>
+                                    <p class="advantages__text">
+                                        Мы — тот самый единственный в мире сайт, где отзывы модерируются только по трём признакам: политика, религия и мат. Сами же отзывы, какие-бы они не были опубликованы все.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__nav">
+                            <div class="swiper-pagination js-swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="algorithm">
+            <div class="algorithm__row">
+                <div class="algorithm__left">
+                    <div class="algorithm__img">
+                        <picture>
+                            <img src="./img/content/algorithm/img_1.png" alt="" loading="lazy" width="761" height="577">
+                        </picture>
+                    </div>
+                    <div class="algorithm__title">Убедитесь <br>в эффективности работы <span> алгоритма</span></div>
+                </div>
+                <div class="algorithm__list">
+                    <a href="#" class="algorithm__item">
+                        <span>Узнайте детали работы алгоритма</span>
+                        <svg width="39" height="39">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow_white"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="algorithm__item">
+                        <span>Ознакомьтесь со статистикой по прогнозам прошедших спортивных матчей</span>
+                        <svg width="39" height="39">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow_white"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="algorithm__item">
+                        <span>Убедитесь в качестве платных прогнозов, подписавшись на 1 день</span>
+                        <svg width="39" height="39">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow_white"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="algorithm__item">
+                        <span>Получите все преимущества при покупке абонемента!</span>
+                        <svg width="39" height="39">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow_white"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="algorithm__right">
+                    <a href="#" class="algorithm__back-link">
+                        <svg width="39" height="39">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow_green_left"></use>
+                        </svg>
+                    </a>
+                    <div class="algorithm__content">
+                        <div class="algorithm__content-title">
+                            Cервис прогнозов ASB Predictions — в тройке лучших сайтов спортивных прогнозов в 2014, 2015 и 2017 годах.
+                            И лучший в 2016 и 2018 годах. На основе <a href="#">рейтинга SmartGambling.ru </a>
+                        </div>
+                        <div class="algorithm__content-text">
+                            <p>
+                                И вот почему: математический алгоритм, лежащий в основе прогнозирования,
+                                не зависит от субъективных факторов: объективности оценки прогнозиста, внешних факторов,
+                                влияющих на исход матча (погода, состояние здоровья игроков, качество судейства и т.п.) Алгоритм учитывает объективные факторы,
+                                основанные на статистическом анализе и выдает прогноз событий с заранее рассчитанной вероятностью.
+                            </p>
+                            <p>
+                                Такой, которая позволяет не гадать игроку «выиграю - не выиграю», а ставить с обоснованным расчетом на победу и получение прибыли от этих ставок.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-block">
+            <video id="my-video" class="video-js" controls preload="auto" poster="./img/content/video_bg.jpg" data-setup="{}">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" MY_VIDEO type="video/mp4" />
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+
+        <section class="rates">
+            <div class="container">
+                <h2 class="rates__title">Начинай зарабатывать <br> с <span>алгоритмом ASB</span> </h2>
+
+                <div class="rates__row">
+                    <div class="rates__item">
+                        <div class="rates__top">
+                            <div class="rates__img">
+                                <picture>
+                                    <img src="./img/content/rates/1.png" alt="" loading="lazy" width="280" height="280">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rates__body rates__body_first">
+                            <div class="rates__body-title">Тариф <br> «Стартовая десятка»</div>
+                            <div class="rates__price">
+                                <span class="rates__price-text">Стоимость 1 прогноза</span>
+                                <strong>45 ₽</strong>
+                            </div>
+
+                            <div class="rates__body-bottom">
+                                <div class="rates__body-left">
+                                    <div class="rates__body-text">Блок прогнозов 10 штук</div>
+                                    <strong>450 ₽</strong>
+                                </div>
+                                <button class="rates__body-btn">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rates__item">
+                        <div class="rates__top">
+                            <div class="rates__img">
+                                <picture>
+                                    <img src="./img/content/rates/2.png" alt="" loading="lazy" width="280" height="280">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rates__body rates__body_second">
+                            <div class="rates__body-title">Тариф <br> «Неделя прогнозов»</div>
+                            <div class="rates__price">
+                                <span class="rates__price-text">Стоимость 1 прогноза</span>
+                                <strong>30 ₽</strong>
+                            </div>
+
+                            <div class="rates__body-bottom">
+                                <div class="rates__body-left">
+                                    <div class="rates__body-text">Блок прогнозов 30 штук</div>
+                                    <strong>900 ₽</strong>
+                                </div>
+                                <button class="rates__body-btn">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rates__item">
+                        <div class="rates__top">
+                            <div class="rates__img">
+                                <picture>
+                                    <img src="./img/content/rates/3.png" alt="" loading="lazy" width="280" height="280">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rates__body rates__body_third">
+                            <div class="rates__body-title">Тариф <br> «Пятьдесят»</div>
+                            <div class="rates__price">
+                                <span class="rates__price-text">Стоимость 1 прогноза</span>
+                                <strong>25 ₽</strong>
+                            </div>
+
+                            <div class="rates__body-bottom">
+                                <div class="rates__body-left">
+                                    <div class="rates__body-text">Блок прогнозов 50 штук</div>
+                                    <strong>1250 ₽</strong>
+                                </div>
+
+                                <button class="rates__body-btn">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rates__item">
+                        <div class="rates__top">
+                            <div class="rates__img">
+                                <picture>
+                                    <img src="./img/content/rates/4.png" alt="" loading="lazy" width="280" height="280">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rates__body rates__body_fourth">
+                            <div class="rates__body-title">Тариф <br>«Про»</div>
+                            <div class="rates__price">
+                                <span class="rates__price-text">Стоимость 1 прогноза</span>
+                                <strong>10 ₽</strong>
+                            </div>
+
+                            <div class="rates__body-bottom">
+                                <div class="rates__body-left">
+                                    <div class="rates__body-text">Блок прогнозов 250 штук</div>
+                                    <strong>2500 ₽</strong>
+                                </div>
+                                <button class="rates__body-btn">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn_empty rates__btn">Подробнее</a>
+            </div>
+        </section>
+
+        <div class="forecast-block">
+            <div class="forecast-block__bg">
+                <picture>
+                    <source media="(min-width: 801px)" srcset="./img/content/forecast-block/banner.png">
+                    <img src="./img/content/forecast-block/banner_mob.png" alt="" loading="lazy" width="1920" height="1061">
+                </picture>
+            </div>
+
+            <div class="container">
+                <div class="forecast-block__wrap">
+                    <div class="forecast-block__title">Делаем прогнозы для разных <br> <span>видов спорта</span></div>
+
+                    <div class="forecast-block__inner">
+                        <div class="forecast-block__item forecast-block__item_first">
+                            <div class="forecast-block__img">
+                                <picture>
+                                    <img src="./img/content/forecast-block/1.png" alt="" loading="lazy" width="410" height="410">
+                                </picture>
+                            </div>
+                            <div class="forecast-block__name">Футбол</div>
+                        </div>
+
+                        <div class="forecast-block__item forecast-block__item_second">
+                            <div class="forecast-block__img">
+                                <picture>
+                                    <img src="./img/content/forecast-block/2.png" alt="" loading="lazy" width="248" height="248">
+                                </picture>
+                            </div>
+                            <div class="forecast-block__name">баскетбол</div>
+                        </div>
+
+                        <div class="forecast-block__item forecast-block__item_third">
+                            <div class="forecast-block__img">
+                                <picture>
+                                    <img src="./img/content/forecast-block/3.png" alt="" loading="lazy" width="215" height="215">
+                                </picture>
+                            </div>
+                            <div class="forecast-block__name">теннис</div>
+                        </div>
+
+                        <div class="forecast-block__item forecast-block__item_fourth">
+                            <div class="forecast-block__img">
+                                <picture>
+                                    <img src="./img/content/forecast-block/4.png" alt="" loading="lazy" width="181" height="181">
+                                </picture>
+                            </div>
+                            <div class="forecast-block__name">волейбол</div>
+                        </div>
+
+                        <div class="forecast-block__item forecast-block__item_fifth">
+                            <div class="forecast-block__img">
+                                <picture>
+                                    <img src="./img/content/forecast-block/5.png" alt="" loading="lazy" width="170" height="170">
+                                </picture>
+                            </div>
+                            <div class="forecast-block__name">гандбол</div>
+                        </div>
+
+                        <div class="forecast-block__item forecast-block__item_sixth">
+                            <div class="forecast-block__img">
+                                <picture>
+                                    <img src="./img/content/forecast-block/6.png" alt="" loading="lazy" width="150" height="150">
+                                </picture>
+                            </div>
+                            <div class="forecast-block__name">бейсбол</div>
+                        </div>
+
+                        <div class="forecast-block__item forecast-block__item_seventh">
+                            <div class="forecast-block__img">
+                                <picture>
+                                    <img src="./img/content/forecast-block/7.png" alt="" loading="lazy" width="147" height="147">
+                                </picture>
+                            </div>
+                            <div class="forecast-block__name">хоккей</div>
+                        </div>
+                    </div>
+
+                    <div class="forecast-block__buttons">
+                        <button class="btn btn_green forecast-block__btn">бесплатные прогнозы</button>
+                        <button class="btn btn_empty forecast-block__btn">платные прогнозы</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecasts">
+            <div class="container">
+                <div class="forecasts__top">
+                    <div class="forecasts__img">
+                        <picture>
+                            <source media="(min-width: 993px)" srcset="./img/content/forecasts_bg.png">
+                            <img src="./img/content/forecasts_bg_mob.png" alt="" loading="lazy" width="1416" height="334">
+                        </picture>
+                    </div>
+                    <div class="forecasts__content">
+                        <div class="forecasts__content-title">Ближайшие платные <br> прогнозы</div>
+                        <span class="forecasts__content-data">28.12.2021</span>
+                    </div>
+                </div>
+
+                <div class="forecasts__flex">
+                    <div class="forecasts__col">
+                        <div class="forecasts__col-title">Вид спорта</div>
+                        <ul class="forecasts__list">
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#football"></use>
+                                    </svg>
+                                    <span>Футбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#hockey"></use>
+                                    </svg>
+                                    <span>Хоккей</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#basketball"></use>
+                                    </svg>
+                                    <span>баскетбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#tennis"></use>
+                                    </svg>
+                                    <span>теннис</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#baseball"></use>
+                                    </svg>
+                                    <span>бейсбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#handball"></use>
+                                    </svg>
+                                    <span>гандбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#volleyball"></use>
+                                    </svg>
+                                    <span>волейбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#american-football"></use>
+                                    </svg>
+                                    <span>американский футбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#beach-soccer"></use>
+                                    </svg>
+                                    <span>пляжный футбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#floorball"></use>
+                                    </svg>
+                                    <span>флорбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#water-polo"></use>
+                                    </svg>
+                                    <span>водное поло</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#badminton"></use>
+                                    </svg>
+                                    <span>бадминтон</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#hockey"></use>
+                                    </svg>
+                                    <span>хоккей с мячом</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#hockey"></use>
+                                    </svg>
+                                    <span>хоккей на траве</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#table-tennis"></use>
+                                    </svg>
+                                    <span>настольный теннис</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#cybersport"></use>
+                                    </svg>
+                                    <span>киберспорт</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#rugby"></use>
+                                    </svg>
+                                    <span>регби</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#biathlon"></use>
+                                    </svg>
+                                    <span>биатлон</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#diving"></use>
+                                    </svg>
+                                    <span>прыжки в воду</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#cycling"></use>
+                                    </svg>
+                                    <span>велоспорт</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#australian-football"></use>
+                                    </svg>
+                                    <span>австралийский футбол</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#football"></use>
+                                    </svg>
+                                    <span>футзал</span>
+                                </a>
+                            </li>
+                            <li class="forecasts__list-item">
+                                <a href="#" class="forecasts__list-link forecasts__list-link_last">
+                                    <span>все</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="forecasts__col">
+                        <div class="forecasts__col-title">Прогнозы</div>
+                        <div class="forecasts__buttons">
+                            <button class="btn btn_empty forecasts__buttons-btn">Сегодня</button>
+                            <button class="btn btn_empty forecasts__buttons-btn">Завтра</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table forecasts__table">
+                    <div class="table__row">
+                        <div class="table__col">
+                            <div class="table__sport">
+                                <svg>
+                                    <use xlink:href="./img/sprites/sprite.svg#football"></use>
+                                </svg>
+                                <span>Футбол</span>
+                            </div>
+                            <div class="table__date">
+                                <strong>14.12.2021</strong>
+                                <span>22:30</span>
+                            </div>
+                        </div>
+
+                        <div class="table__col">
+                            <div class="table__match">
+                                <strong>Вольсбург - Кельн</strong>
+                                <span>Германия / Бундеслига</span>
+                            </div>
+                            <div class="table__match-score">
+                                <strong>--</strong>
+                                <span> / --</span>
+                            </div>
+                        </div>
+
+                        <div class="table__col">
+                            <span class="table__price">50 ₽</span>
+                            <button class="btn btn_white table__col-btn">Купить</button>
+                        </div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__col">
+                            <div class="table__sport">
+                                <svg>
+                                    <use xlink:href="./img/sprites/sprite.svg#hockey"></use>
+                                </svg>
+                                <span>Хоккей</span>
+                            </div>
+                            <div class="table__date">
+                                <strong>14.12.2021</strong>
+                                <span>21:30</span>
+                            </div>
+                        </div>
+
+                        <div class="table__col">
+                            <div class="table__match">
+                                <strong>Дюссельдорфер - Стробинг Тайгерс</strong>
+                                <span>Германия / DEL</span>
+                            </div>
+                            <div class="table__match-score">
+                                <strong>--</strong>
+                                <span> / --</span>
+                            </div>
+                        </div>
+
+                        <div class="table__col">
+                            <span class="table__price">50 ₽</span>
+                            <button class="btn btn_white table__col-btn">Купить</button>
+                        </div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__col">
+                            <div class="table__sport">
+                                <svg>
+                                    <use xlink:href="./img/sprites/sprite.svg#football"></use>
+                                </svg>
+                                <span>Футбол</span>
+                            </div>
+                            <div class="table__date">
+                                <strong>14.12.2021</strong>
+                                <span>20:45</span>
+                            </div>
+                        </div>
+
+                        <div class="table__col">
+                            <div class="table__match">
+                                <strong>Радомиак Радом - Пяст Гливице</strong>
+                                <span>Польша / Экстракласа Польша</span>
+                            </div>
+                            <div class="table__match-score">
+                                <strong>--</strong>
+                                <span> / --</span>
+                            </div>
+                        </div>
+
+                        <div class="table__col">
+                            <span class="table__price">50 ₽</span>
+                            <button class="btn btn_white table__col-btn">Купить</button>
+                        </div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__col">
+                            <div class="table__sport">
+                                <svg>
+                                    <use xlink:href="./img/sprites/sprite.svg#football"></use>
+                                </svg>
+                                <span>Футбол</span>
+                            </div>
+                            <div class="table__date">
+                                <strong>14.12.2021</strong>
+                                <span>17:00</span>
+                            </div>
+                        </div>
+
+                        <div class="table__col">
+                            <div class="table__match">
+                                <strong>Венеция - Тернана</strong>
+                                <span>Италия / Кубок Италии</span>
+                            </div>
+                            <div class="table__match-score">
+                                <strong>--</strong>
+                                <span> / --</span>
+                            </div>
+                        </div>
+
+                        <div class="table__col">
+                            <span class="table__price">50 ₽</span>
+                            <button class="btn btn_white table__col-btn">Купить</button>
+                        </div>
+                    </div>
+                    <button class="btn table__btn">смотреть все прогнозы</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="reviews">
+            <div class="container">
+                <h2 class="reviews__title">Отзывы</h2>
+
+                <div class="reviews__wrap">
+                    <div class="reviews__row swiper js-slider-reviews">
+                        <div class="swiper-wrapper">
+                            <div class="reviews__item swiper-slide">
+                                <div class="reviews__icons">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__name">Константин филареев</div>
+                                <span class="reviews__data">28.11.2021</span>
+                                <div class="reviews__text">
+                                    Сначала покупал по 1 прогнозу, потом купил 10 шт. В результате из 12 1 возврат, 5 лузов, 6 выигрышей. Пока думаю, стоит ли продолжать.
+                                </div>
+
+                                <div class="reviews__admin">
+                                    <div class="reviews__admin-icon">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews__admin-right">
+                                        <div class="reviews__admin-title">Администратор</div>
+                                        <p class="reviews__admin-text">Очень признательны за ваш отзыв и отдельно за то, что выступили адвокатом нашего сервиса :) </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__item swiper-slide">
+                                <div class="reviews__icons reviews__icons_orange">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__name">Мария Романенко</div>
+                                <span class="reviews__data">28.11.2021</span>
+                                <div class="reviews__text">
+                                    У вас купленные отзывы, очевидно же
+                                </div>
+
+                                <div class="reviews__admin">
+                                    <div class="reviews__admin-icon">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews__admin-right">
+                                        <div class="reviews__admin-title">Администратор</div>
+                                        <p class="reviews__admin-text">Как видите, нет. Больше того, все отзывы, которые по существу, мы публикуем. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__item swiper-slide">
+                                <div class="reviews__icons">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__name">Иван Спиридонов</div>
+                                <span class="reviews__data">28.11.2021</span>
+                                <div class="reviews__text">
+                                    <p>Соглашусь с предыдущими отзывами - служба поддержки здесь очень крутая!</p>
+                                    <p> Всегда вежливо и быстро отвечает, даже таким занудам как я :)</p>
+                                    <p> Само качество прогнозов оцениваю на "3", все-таки бывают серии из лузов. Хотя где их нет? Эти хотя бы выкладывают честную статистику.... </p>
+                                </div>
+                            </div>
+                            <div class="reviews__item swiper-slide">
+                                <div class="reviews__icons">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__name">Константин филареев</div>
+                                <span class="reviews__data">28.11.2021</span>
+                                <div class="reviews__text">
+                                    Сначала покупал по 1 прогнозу, потом купил 10 шт. В результате из 12 1 возврат, 5 лузов, 6 выигрышей. Пока думаю, стоит ли продолжать.
+                                </div>
+
+                                <div class="reviews__admin">
+                                    <div class="reviews__admin-icon">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews__admin-right">
+                                        <div class="reviews__admin-title">Администратор</div>
+                                        <p class="reviews__admin-text">Очень признательны за ваш отзыв и отдельно за то, что выступили адвокатом нашего сервиса :) </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__item swiper-slide">
+                                <div class="reviews__icons reviews__icons_orange">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__name">Мария Романенко</div>
+                                <span class="reviews__data">28.11.2021</span>
+                                <div class="reviews__text">
+                                    У вас купленные отзывы, очевидно же
+                                </div>
+
+                                <div class="reviews__admin">
+                                    <div class="reviews__admin-icon">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews__admin-right">
+                                        <div class="reviews__admin-title">Администратор</div>
+                                        <p class="reviews__admin-text">Как видите, нет. Больше того, все отзывы, которые по существу, мы публикуем. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__item swiper-slide">
+                                <div class="reviews__icons">
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="./img/sprites/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__name">Иван Спиридонов</div>
+                                <span class="reviews__data">28.11.2021</span>
+                                <div class="reviews__text">
+                                    <p>Соглашусь с предыдущими отзывами - служба поддержки здесь очень крутая!</p>
+                                    <p>Соглашусь с предыдущими отзывами - служба поддержки здесь очень крутая!</p>
+                                    <p>Само качество прогнозов оцениваю на "3", все-таки бывают серии из лузов. Хотя где их нет? Эти хотя бы выкладывают честную статистику.... </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="reviews__nav">
+                        <div class="swiper-pagination js-swiper-pagin"></div>
+                        <div class="swiper-button-prev js-swiper-prev"></div>
+                        <div class="swiper-button-next js-swiper-next"></div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn_empty reviews__btn">все отзывы</a>
+            </div>
+        </section>
+
+        <section class="articles">
+            <div class="container">
+                <div class="articles__head">
+                    <h2 class="articles__title">Последние статьи <br> из <span>блога</span> </h2>
+                    <div class="articles__right">
+                        <div class="pagination articles__pagination">
+                            <ul class="pagination__list">
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">
+                                        <svg>
+                                            <use xlink:href="./img/sprites/sprite.svg#arrow_black_left"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="pagination__item"><a href="#" class="pagination__link pagination__link_active">1</a></li>
+                                <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                                <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                                <li class="pagination__item"><a href="#" class="pagination__link">...</a></li>
+                                <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">
+                                        <svg>
+                                            <use xlink:href="./img/sprites/sprite.svg#arrow_black_right"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="articles__head-link">Смотреть все</a>
+                    </div>
+                </div>
+                <div class="articles__wrap">
+                    <div class="articles__row">
+                        <div class="articles__item">
+                            <div class="articles__img">
+                                <picture>
+                                    <img src="./img/content/articles/1.jpg" alt="" loading="lazy" width="203" height="203">
+                                </picture>
+                            </div>
+                            <div class="articles__body">
+                                <span class="articles__data">28.11.2021</span>
+                                <div class="articles__name">Популярные стратегии игры в букмекерских конторах</div>
+                                <p class="articles__text">
+                                    Количество стратегий игры с букмекерскими конторами стремительно увеличивается...
+                                </p>
+                                <a href="#" class="articles__link">Читать дальше</a>
+                            </div>
+                        </div>
+                        <div class="articles__item">
+                            <div class="articles__img">
+                                <picture>
+                                    <img src="./img/content/articles/2.jpg" alt="" loading="lazy" width="203" height="203">
+                                </picture>
+                            </div>
+                            <div class="articles__body">
+                                <span class="articles__data">28.11.2021</span>
+                                <div class="articles__name">Популярные стратегии игры в букмекерских конторах</div>
+                                <p class="articles__text">
+                                    Количество стратегий игры с букмекерскими конторами стремительно увеличивается...
+                                </p>
+                                <a href="#" class="articles__link">Читать дальше</a>
+                            </div>
+                        </div>
+                        <div class="articles__item">
+                            <div class="articles__img">
+                                <picture>
+                                    <img src="./img/content/articles/3.jpg" alt="" loading="lazy" width="203" height="203">
+                                </picture>
+                            </div>
+                            <div class="articles__body">
+                                <span class="articles__data">28.11.2021</span>
+                                <div class="articles__name">Популярные стратегии игры в букмекерских конторах</div>
+                                <p class="articles__text">
+                                    Количество стратегий игры с букмекерскими конторами стремительно увеличивается...
+                                </p>
+                                <a href="#" class="articles__link">Читать дальше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn_empty articles__btn">смотреть все</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="buy">
+            <div class="container">
+                <div class="buy__row">
+                    <div class="buy__title">
+                        Вы можете существенно сэкономить, <br> если купите абонемент <strong>сразу на несколько прогнозов</strong>
+                    </div>
+
+                    <button class="buy__btn">подробнее</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__head">
+                    Мы не занимаемся организацией и проведением азартных игр. Информация носит ознакомительный характер. Ограничение 18+
+                </div>
+
+                <div class="footer__center">
+                    <a href="/" class="footer__logo">
+                        <img src="./img/content/logo.png" alt="" loading="lazy" width="300" height="98">
+                    </a>
+
+                    <div class="footer__pay">
+                        <div class="footer__pay-label">Способы оплаты:</div>
+                        <div class="footer__pay-logo">
+                            <img src="./img/content/pay/1.png" alt="" loading="lazy" width="53" height="17">
+                            <img src="./img/content/pay/2.png" alt="" loading="lazy" width="36" height="28">
+                            <img src="./img/content/pay/3.png" alt="" loading="lazy" width="84" height="17">
+                            <img src="./img/content/pay/4.png" alt="" loading="lazy" width="85" height="16">
+                        </div>
+                        <div class="footer__pay-text">
+                            2014-2021 Analytics Smart Bets (ASB)
+                        </div>
+                    </div>
+
+                    <div class="footer__menu">
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                    О сервисе
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Вопрос-Ответ
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Блог
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Отзывы
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Контакты
+                                </a>
+                            </li>
+
+                        </ul>
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                    Бесплатные прогнозы
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Платные прогнозы
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Результаты
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Статистика
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Тарифы
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                    Документация
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Поддержка
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Пользовательское соглашение
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__copy">
+                COPYRIGHT 2021 - <span>TERMS & CONDITIONS PRIVACY POLICY</span>
+            </div>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="./libs/select2/select2.min.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+
+    <script src="./libs/jquery-3.7.0.min.js"></script>
+    <script src="./libs/select2/select2.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=28517946-dbf1-42a5-9b36-08632da36a93&lang=ru_RU&"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+    <!-- <script src="js/vendor.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
